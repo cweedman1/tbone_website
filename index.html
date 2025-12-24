@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tresslynn Weedman Fine Art</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background">
+    <header>
+      <a href="index.html" class="logo-title">
+        <img src="images/tw_web_logo1.png" alt="TW Logo" class="site-logo" />
+        <h1>Tresslynn Weedman Fine Art</h1>
+      </a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Artist Statement</h2>
+        <p>
+          I create portraits that live somewhere between realism and emotional narrative —
+          paintings that reflect who we are beneath the surface.
+        </p>
+        <p>
+          My work is rooted in personal experience, subtle expression, and hands.
+          <span class="highlight">Always the hands.</span>
+        </p>
+        <p class="signature">— Tresslynn Weedman</p>
+        <a href="gallery.html" class="button">View Gallery</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/hero_index.webp" alt="Tresslynn painting" />
+      </div>
+    </section>
+
+    <section class="art-preview">
+      <div class="preview-title">Featured Work</div>
+      <div class="art-thumbs">
+        <img src="images/gallery_thumbs/tres_gal_1.webp" alt="Featured Painting 1">
+        <img src="images/gallery_thumbs/tres_gal_2.webp" alt="Featured Painting 2">
+        <img src="images/gallery_thumbs/tres_gal_3.webp" alt="Featured Painting 3">
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Tresslynn Weedman. All rights reserved.
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Expanded Artwork" id="lightbox-img">
+  </div>
+
+  <script>
+    const thumbs = document.querySelectorAll('.art-thumbs img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        lightboxImg.src = thumb.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+  </script>
+</body>
+</html>
