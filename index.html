@@ -60,22 +60,7 @@
     <img src="" alt="Expanded Artwork" id="lightbox-img">
   </div>
 
-  <script>
-    const thumbs = document.querySelectorAll('.art-thumbs img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-
-    thumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        lightboxImg.src = thumb.src;
-        lightbox.style.display = 'flex';
-      });
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
-    });
-  </script>
+  <!-- ✅ External JS, CSP-compliant -->
+  <script src="js/lightbox.js" defer></script>
 </body>
 </html>
