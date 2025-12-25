@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery | Tresslynn Weedman Fine Art</title>
+  <title>Gallery | Treslynn Weedman Fine Art</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
   <header>
     <a href="index.html" class="logo-title">
       <img src="images/tw_web_logo1.png" alt="TW Logo" class="site-logo" />
-      <h1>Tresslynn Weedman Fine Art</h1>
+      <h1>Treslynn Weedman Fine Art</h1>
     </a>
     <nav>
       <a href="index.html">Home</a>
@@ -27,41 +27,42 @@
   </section>
 
   <section class="gallery-grid">
-    <img src="images/gallery_full/tres_full_gal_1.webp" alt="Artwork 1">
-    <img src="images/gallery_full/tres_full_gal_2.webp" alt="Artwork 2">
-    <img src="images/gallery_full/tres_full_gal_3.webp" alt="Artwork 3">
-    <img src="images/gallery_full/tres_full_gal_4.webp" alt="Artwork 4">
-    <img src="images/gallery_full/tres_full_gal_5.webp" alt="Artwork 5">
-    <img src="images/gallery_full/tres_full_gal_6.webp" alt="Artwork 6">
-    <img src="images/gallery_full/tres_full_gal_7.webp" alt="Artwork 7">
-    <!-- Add more as needed -->
+    <img src="images/gallery_full/tres_full_gal_1.webp" alt="Artwork 1" class="gallery-image">
+    <img src="images/gallery_full/tres_full_gal_2.webp" alt="Artwork 2" class="gallery-image">
+    <img src="images/gallery_full/tres_full_gal_3.webp" alt="Artwork 3" class="gallery-image">
+    <img src="images/gallery_full/tres_full_gal_4.webp" alt="Artwork 4" class="gallery-image">
+    <img src="images/gallery_full/tres_full_gal_5.webp" alt="Artwork 5" class="gallery-image">
+    <img src="images/gallery_full/tres_full_gal_6.webp" alt="Artwork 6" class="gallery-image">
+    <img src="images/gallery_full/tres_full_gal_7.webp" alt="Artwork 7" class="gallery-image">
+    <!-- Add more if needed -->
   </section>
 
   <footer>
-    &copy; 2025 Tresslynn Weedman. All rights reserved.
+    &copy; 2025 Treslynn Weedman. All rights reserved.
   </footer>
 
-  <!-- Optional: Lightbox -->
+  <!-- Lightbox container -->
   <div class="lightbox" id="lightbox">
     <img src="" alt="Expanded Artwork" id="lightbox-img">
   </div>
 
   <script>
-    // Lightbox functionality
-    const galleryImages = document.querySelectorAll('.gallery-grid img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    document.addEventListener("DOMContentLoaded", () => {
+      const galleryImages = document.querySelectorAll('.gallery-image');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
 
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
+      galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.style.display = 'flex';
+        });
       });
-    });
 
-    lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
+      lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      });
     });
   </script>
 </body>
