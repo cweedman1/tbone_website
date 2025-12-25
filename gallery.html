@@ -46,24 +46,7 @@
     <img src="" alt="Expanded Artwork" id="lightbox-img">
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const galleryImages = document.querySelectorAll('.gallery-image');
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-
-      galleryImages.forEach(img => {
-        img.addEventListener('click', () => {
-          lightboxImg.src = img.src;
-          lightbox.style.display = 'flex';
-        });
-      });
-
-      lightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
-      });
-    });
-  </script>
+  <!-- ✅ Use external JS file for lightbox functionality -->
+  <script src="js/lightbox.js" defer></script>
 </body>
 </html>
